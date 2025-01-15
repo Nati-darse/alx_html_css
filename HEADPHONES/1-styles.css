@@ -4,15 +4,33 @@
     color: #000;
     text-align: center;
   }
-  .icon{
-    color:red;
-    size: 30px;
+  .icon {
+    color: red; /* Ensure the icons are red */
+    font-size: 40px; /* Increase the size of the icons */
+   /* display: inline-block; /* Ensure proper spacing and alignment */
+    margin-bottom: 10px; /* Add some spacing below the icon */
+}
+
+.containerr{
+  margin: 30px 300px;
+}
+  h1{
+    font-weight: bold;
+    font-size:xx-large;
   }
-  .features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-  }
+.features {
+  display: flex; 
+  justify-content: center;
+  gap: 50px; 
+  flex-wrap: wrap; 
+  font-size: larger;
+}
+
+
+.feature {
+  text-align: center; /* Keep the content of each feature centered */
+  flex: 0 1 200px; /* Ensure each feature has a minimum width */
+}
 
 
 @keyframes scale-up {
