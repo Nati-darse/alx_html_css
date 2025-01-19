@@ -1,0 +1,99 @@
+/* Footer styles */
+.footer {
+  background: var(--main-bg);
+  color: var(--text-color);
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-links {
+  list-style: none;
+  margin: 20px 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: small;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 150px;
+}
+
+.footer-links a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: var(--text-color);
+}
+
+body {
+  background-color: #1a2238;
+  color: white;
+}
+
+.footer-links .icon {
+  width: 50px;
+  /height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid var(--accent-color);
+  transition: box-shadow 0.3s ease;
+}
+
+.footer-links .icon img {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+}
+
+.footer-links .icon:hover {
+  box-shadow: 0 8px 15px rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+.footer-links .icon:hover img {
+  animation: rotate 0.5s linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.footer-links li:nth-child(1) .icon {
+  animation: bounce 2s infinite ease-in-out;
+}
+
+.footer-links li:nth-child(2) .icon {
+  animation: bounce 2s infinite ease-in-out;
+  animation-delay: 0.2s;
+}
+
+.footer-links li:nth-child(3) .icon {
+  animation: bounce 2s infinite ease-in-out;
+  animation-delay: 0.4s;
+}

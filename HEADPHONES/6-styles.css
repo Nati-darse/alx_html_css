@@ -1,0 +1,98 @@
+/* General styles for the section */
+.results {
+    padding: 100px 20px;
+    text-align: center;
+    background: url("images/headphones_hero_2.jpg") no-repeat center center/cover;
+    color: white; /* Text color */
+}
+
+.container h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.conta {
+    padding: 20px 120px;
+}
+
+.container p {
+    margin-bottom: 40px;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Pentagon container */
+.pentagon-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px; /* Space between pentagons */
+}
+
+/* Individual pentagon container */
+.pentagon {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+}
+
+/* Pentagon shape using clip-path */
+.pentagon-shape {
+    width: 120px; /* Width of the pentagon */
+    height: 120px; /* Height of the pentagon */
+    background-color: #ff4949; /* Pentagon background color */
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    margin: 0 auto; /* Center the pentagon */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Text inside pentagon */
+.pentagon .percent,
+.pentagon .description {
+    position: absolute;
+    color: white; /* Text color */
+    font-size: 1rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); 
+}
+
+/* Position the percentage text in the center of the pentagon */
+.pentagon .percent {
+    top: 15%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    font-size: 1.5rem; 
+}
+
+.pentagon .description {
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    font-size: 0.9rem; 
+    font-weight: normal;
+}
+
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 480px) {
+    .pentagon-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .pentagon {
+        width: 100px;
+        height: 100px;
+    }
+    .pentagon-shape {
+        width: 80px;
+        height: 80px;
+    }
+    .pentagon .percent {
+        font-size: 1rem;
+    }
+    .pentagon .description {
+        font-size: 0.7rem;
+    }
+}
